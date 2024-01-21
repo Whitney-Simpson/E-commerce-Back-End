@@ -12,7 +12,13 @@ router.get('/', (req, res) => {
 
 // get one product
 router.get('/:id', (req, res) => {
-  Product.findOne({where: {id: req.params.id}, include: [Category, {model: Tag, through: ProductTag}]}).then(data => res.json(data))
+  Product.findOne({where: {id: req.params.id}, include: [Category, {model: Tag, through: ProductTag}]})
+  .then(data => {
+    if (!data) {
+      return res.status(500).json({error:'Product not found'})
+    }
+    res.json(data)
+  })
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
 });
