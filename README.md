@@ -26,5 +26,6 @@ THEN I am able to successfully create, update, and delete data in my database
 ```
 ## GitHub Location
 https://github.com/Whitney-Simpson/E-commerce-Back-End.git
-##Recording Location
+
+## Recording Location
 <iframe src="https://drive.google.com/file/d/1imfX-NIClZsMJvxC8KH0_2YNSe4gYi_3/preview" width="640" height="480"></iframe>
